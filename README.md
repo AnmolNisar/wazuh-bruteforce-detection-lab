@@ -104,7 +104,13 @@ sudo iptables -L INPUT -n | grep 192.168.56.20
 
 ![dashboard alert](docs/screenshots/dashboard-alert.png)
 
+**Alert details: MITRE ATT&CK mapping (T1110.001 Credential Access / Password Guessing), level 10, frequency 5**
+
 ![alert details](docs/screenshots/alert-details.png)
+
+**Decoded fields from the custom decoder (action, user, source IP)**
+
+![decoded fields](docs/screenshots/alert-decoded-fields.png)
 
 ## What I learned
 
