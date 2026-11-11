@@ -1,0 +1,7 @@
+Nov  6 10:15:00 victim myapp[1234]: LOGIN_SUCCESS user=bob src_ip=192.168.56.15
+Nov  6 10:15:02 victim myapp[1234]: LOGIN_FAILED user=alice src_ip=192.168.56.20
+Nov  6 10:15:03 victim myapp[1234]: LOGIN_FAILED user=alice src_ip=192.168.56.20
+Nov  6 10:15:04 victim myapp[1234]: LOGIN_FAILED user=admin src_ip=192.168.56.20
+Nov  6 10:15:05 victim myapp[1234]: LOGIN_FAILED user=admin src_ip=192.168.56.20
+Nov  6 10:15:06 victim myapp[1234]: LOGIN_FAILED user=root src_ip=192.168.56.20
+Nov  6 10:15:07 victim myapp[1234]: LOGIN_FAILED user=root src_ip=192.168.56.20
