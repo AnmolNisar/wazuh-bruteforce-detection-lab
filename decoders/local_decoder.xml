@@ -1,0 +1,19 @@
+<!--
+  Custom decoder for a fictional application "myapp".
+  Example log line (syslog format):
+    Nov  6 10:15:02 victim myapp[1234]: LOGIN_FAILED user=alice src_ip=192.168.56.20
+
+  Install path on the Wazuh server: /var/ossec/etc/decoders/local_decoder.xml
+-->
+
+<!-- Parent: match anything whose syslog program name is "myapp" -->
+<decoder name="myapp">
+  <program_name>^myapp</program_name>
+</decoder>
+
+<!-- Child: extract action, user and source IP -->
+<decoder name="myapp">
+  <parent>myapp</parent>
+  <regex>^(\w+) user=(\S+) src_ip=(\S+)</regex>
+  <order>action, dstuser, srcip</order>
+</decoder>
