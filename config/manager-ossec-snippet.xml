@@ -1,0 +1,19 @@
+<!--
+  Append to the END of /var/ossec/etc/ossec.conf on the Wazuh server.
+  (Wazuh accepts more than one <ossec_config> block.)
+  Then: sudo touch /var/log/myapp.log && sudo systemctl restart wazuh-manager
+-->
+<ossec_config>
+  <localfile>
+    <log_format>syslog</log_format>
+    <location>/var/log/myapp.log</location>
+  </localfile>
+
+  <!-- Block the source IP for 180 s when the custom brute-force rule fires -->
+  <active-response>
+    <command>firewall-drop</command>
+    <location>local</location>
+    <rules_id>100113</rules_id>
+    <timeout>180</timeout>
+  </active-response>
+</ossec_config>
